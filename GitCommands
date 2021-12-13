@@ -1,12 +1,12 @@
-https://education.github.com/git-cheat-sheet-education.pdf
+https://education.github.com/git-cheat-sheet-education.pdf [CHEST SHEET]
 
-
+==============================================================BASIC GIT COMMANDS========================================================================================
 git init
 git status [check the status]
 git add . (for all files)
 git add filename
 git reset filename , git reset . (for all file)
-git remote -v
+git remote -v         [Show all remote connections]
 git rm -f 'filename'  [delete a file]
 git commit -m   [commit the changes]
 git push origin master [push to github]
@@ -14,14 +14,16 @@ git push origin master [push to github]
 
 git remote rm test [remove remote connection git]
 
-===================================
+========================================================================================================================================================================
 
 If you've already committed a bunch of unwanted files, you can unstage them and tell git to mark them as deleted (without actually deleting them) with
 
 git rm --cached -r .
 
 --cached tells it to remove the paths from staging and the index without removing the files themselves and -r operates on directories recursively. You can then git add any files that you want to keep tracking.
-==============================================
+===========================================================================================================================================================================
+                         INSERT A REAM ME FILE FROM COMMAND LINE
+===========================================================================================================================================================================
 
 Go to file folder you want to edit. In our case, for example, it is a folder containing git repository with readme.md file.
 Type vim readme.md
@@ -31,6 +33,22 @@ Hit [Esc] keyboard to leave the vim insert mode.
 And finally, type :w for writing the change or :x for saving and exiting the vim. Hit [Enter] and execute the command.
 
 =================================================================================================================================================
+
+                                               DELETE A BRANCH
+=======================================================================================================================================================
+$ git push -d <remote_name> <branchname>
+$ git branch -d <branchname>
+Note: In most cases, <remote_name> will be origin.
+
+Delete Local Branch
+To delete the local branch use one of the following:
+
+$ git branch -d <branch_name>
+$ git branch -D <branch_name>
+The -d option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch.
+The -D option is an alias for --delete --force, which deletes the branch "irrespective of its merged status." [Source: man git-branch]
+You will receive an error if you try to delete the currently selected branch.
+========================================================================================================================================================
 
 
 

@@ -29,3 +29,10 @@ Get to the edit/insert mode by typing [i] keyboard.
 Fix the typo.
 Hit [Esc] keyboard to leave the vim insert mode.
 And finally, type :w for writing the change or :x for saving and exiting the vim. Hit [Enter] and execute the command.
+
+=================================================================================================================================================
+
+
+
+
+

@@ -22,3 +22,10 @@ git rm --cached -r .
 
 --cached tells it to remove the paths from staging and the index without removing the files themselves and -r operates on directories recursively. You can then git add any files that you want to keep tracking.
 ==============================================
+
+Go to file folder you want to edit. In our case, for example, it is a folder containing git repository with readme.md file.
+Type vim readme.md
+Get to the edit/insert mode by typing [i] keyboard.
+Fix the typo.
+Hit [Esc] keyboard to leave the vim insert mode.
+And finally, type :w for writing the change or :x for saving and exiting the vim. Hit [Enter] and execute the command.

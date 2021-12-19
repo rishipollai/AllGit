@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Contact List" icon-name="standard:contact">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-input label="Find Contact" value={searchKey} onchange={handleChange} >
+
+                </lightning-input>
+            </lightning-layout-item>
+
+        
+        </lightning-layout>
+
+        <lightning-layout vertical-align="center">  
+               <template if:true={contacts}>
+
+                   <template for:each={contacts} for:item="contact" >
+                    <lightning-layout-item padding="around-small" key={contact.key}>
+                        <p>{contact.Name}</p>
+                        <p><lightning-formatted-phone value={contact.Phone}></lightning-formatted-phone></p>
+                        
+                    </lightning-layout-item>
+ 
+                 </template>
+
+               </template>
+    
+            </lightning-layout>  
+
+    </lightning-card>
+
+    
+</template>

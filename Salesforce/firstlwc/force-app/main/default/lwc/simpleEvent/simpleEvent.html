@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+    <c-paginator onnext={handleNext} onprevious={handlePrevious}></c-paginator>
+     
+        <template if:true={page}>
+            Current page no is :- {page}
+        </template>
+    </lightning-card>
+    
+</template>

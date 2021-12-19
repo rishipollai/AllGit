@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="my first lightning web component" icon-name="custom:custom4">
+        
+        <lightning-layout vertical-align="center">
+
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={greeting}>
+                </lightning-formatted-text>
+            </lightning-layout-item>
+
+        
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={message}>
+                </lightning-formatted-text>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <template if:true={maps}>
+                    <template for:each={maps} for:item="option">
+                        
+                        {option.key} &nbsp;
+                        {option.value} 
+
+                    </template>
+                  
+
+                </template>
+            </lightning-layout-item>
+
+
+        </lightning-layout>
+
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                
+               <lightning-button label="Press Me" variant="brand" onclick={handelClick}>
+
+               </lightning-button>
+
+            </lightning-layout-item>
+
+        </lightning-layout>
+
+
+    </lightning-card>
+    
+</template>
